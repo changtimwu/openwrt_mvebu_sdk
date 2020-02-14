@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y \
   build-essential gcc-5 \
   libfl2 bison \
   git jq wget libncurses5-dev \
-  zlib1g-dev lib32ncurses5  lib32z1 mtd-utils samba-client  \
+  zlib1g-dev mtd-utils samba-client  \
   libcurl4-openssl-dev gnutls-bin \
   cpio sshpass iputils-ping \
-  lib32ncurses5 lib32z1 mtd-utils u-boot-tools
+  u-boot-tools
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 10; update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 20; update-alternatives --install /usr/bin/cc cc /usr/bin/gcc 30;update-alternatives --set cc /usr/bin/gcc
 ENV TLPATH /opt/toolchains
 ENV TLTARB openwrt-sdk-18.06.5-mvebu-cortexa9_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
