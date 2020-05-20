@@ -1,0 +1,6 @@
+FROM noonien/openwrt-buildroot  
+RUN sudo DEBIAN_FRONTEND=noninteractive  apt-get update -y
+RUN sudo DEBIAN_FRONTEND=noninteractive  apt-get install -y \
+  xz-utils make vim unzip \
+  curl jq smbclient sshpass tzdata
+
